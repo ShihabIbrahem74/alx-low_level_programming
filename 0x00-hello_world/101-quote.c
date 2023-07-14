@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <string.h>
 
 /**
  * main - The entry points
@@ -8,7 +9,8 @@
 
 int main(void)
 {
-	char i[]="and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	write(sizeof(i),i,sizeof(char));
+	char i[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	write(2, i, strlen(i));
 	return (1);
 }
