@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * main - calls another function called _putchar
+ * print_alphabet - calls another function called _putchar
  *
  * Description: for alx task 0
  *
  * Return: 0 on success
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	int i;
 
