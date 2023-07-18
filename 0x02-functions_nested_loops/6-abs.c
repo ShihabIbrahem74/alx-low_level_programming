@@ -1,5 +1,4 @@
 #include "main.h"
-#include <math.h>
 
 /**
  * _abs - calls another function called _putchar
@@ -15,7 +14,6 @@ int _abs(int n)
 
 {
 int i;
-int abs;
 
 if (n >= 0)
 {
@@ -23,8 +21,7 @@ i = n;
 }
 else
 {
-abs = n*n;
-i = sqrt(abs);
+i = n - n - n;
 }
 
 
