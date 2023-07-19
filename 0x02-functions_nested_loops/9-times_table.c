@@ -19,7 +19,14 @@ for (rows = 0; rows < 10; rows++)
 for (col = 0; col < 10; col++)
 {
 sum = rows * col;
+if (sum <= 9)
 _putchar(sum + '0');
+else
+{
+_putchar((sum / 10) + '0');
+_putchar((sum % 10) + '0');
+}
+_putchar(' ');
 }
 _putchar('\n');
 }
