@@ -4,7 +4,7 @@
  * add - calls another function called _putchar
  *
  * Description: for alx task 0
- * 
+ *
  * @x: first int to add
  * @y: second int to add
  *
