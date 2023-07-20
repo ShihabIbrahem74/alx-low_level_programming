@@ -22,6 +22,6 @@ _putchar(' ');
 _putchar('\\');
 _putchar('\n');
 }
-if (n == 0)
+if (n <= 0)
 _putchar('\n');
 }
