@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
-int prime_check(long long int n);
+#include <stdint.h>
+int prime_check(int64_t n);
 
 /**
  * main - Entry point
@@ -11,9 +12,9 @@ int prime_check(long long int n);
  */
 int main(void)
 {
-long long int i;
-long long int final;
-long long int num = 612852475143;
+int64_t i;
+int64_t final;
+int64_t num = 612852475143;
 
 for (i = 2; i < num; i++)
 {
@@ -26,7 +27,8 @@ num = num / i;
 }
 }
 }
-printf("%lld\n", final);
+printf("%ld\n", final);
+return (0);
 }
 
 /**
@@ -39,7 +41,7 @@ printf("%lld\n", final);
  * Return: Always ret.
  */
 
-int prime_check(long long int n)
+int prime_check(int64_t n)
 {
 int check;
 int ret;
