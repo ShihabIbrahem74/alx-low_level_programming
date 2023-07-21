@@ -29,4 +29,5 @@ final = i;
 if (num > 2)
 final = num;
 printf("%ld\n", final);
+return (0);
 }
