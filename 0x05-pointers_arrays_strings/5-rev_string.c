@@ -18,7 +18,7 @@ int end = 0;
 while (s[end] != 0)
 end++;
 end--;
-while (start != end)
+while (start < end)
 {
 s[start] = s[start] ^ s[end];
 s[end] = s[start] ^ s[end];
