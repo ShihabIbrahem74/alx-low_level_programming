@@ -19,7 +19,7 @@ while (i <= 2645)
 {
 x = rand() % 128;
 i += x;
-putchar(c);
+putchar(x);
 }
 putchar(2772 - i);
 return (0);
