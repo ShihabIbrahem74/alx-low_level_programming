@@ -21,7 +21,7 @@ dest[destl] = src[scrl];
 scrl++;
 destl++;
 }
-while (scrl < n)
+while (scrl <= n)
 {
 dest[scrl] = '\0';
 scrl++;
