@@ -15,13 +15,13 @@ char *_strncpy(char *dest, char *src, int n)
 int destl = 0;
 int scrl = 0;
 
-while (scrl <= n && src[scrl] != 0)
+while (scrl < n && src[scrl] != 0)
 {
 dest[destl] = src[scrl];
 scrl++;
 destl++;
 }
-while (scrl <= n)
+while (scrl < n)
 {
 dest[scrl] = '\0';
 scrl++;
