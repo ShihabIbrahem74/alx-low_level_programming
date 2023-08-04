@@ -14,17 +14,18 @@
 int main(int argc, char **argv)
 {
 int sum = 0;
-char *c;
+int i, x;
 
-while (--argc)
+for (i = argc - 1; i > 0; i--)
 {
-for (c = argv[argc]; *c; c++)
-if (*c < '0' || *c > '9')
+x = atoi(argv[i]);
+if (*argv[i] < '0' || *argv[i] > '9')
 {
 printf("Error\n");
 return (1);
 }
-sum += atoi(argv[argc]);
+else
+sum += x;
 }
 printf("%d\n", sum);
 return (0);
