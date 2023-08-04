@@ -19,7 +19,7 @@ int i, x;
 for (i = 0; i < argc - 1; i++)
 {
 x = atoi(argv[i + 1]);
-if (x == 0 && *argv[i + 1] != '0')
+if (x <= 0 && *argv[i + 1] != '0')
 {
 printf("Error\n");
 return (1);
