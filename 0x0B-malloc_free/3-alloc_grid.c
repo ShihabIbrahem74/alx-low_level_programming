@@ -18,7 +18,7 @@ int i, j;
 if (width <= 0 || height <= 0)
 return (NULL);
 
-ptr = (int **)malloc(height * sizeof(int));
+ptr = (int **)malloc(height * sizeof(int *));
 
 for (i = 0; i < height; i++)
 {
