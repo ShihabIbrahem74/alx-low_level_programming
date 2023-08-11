@@ -35,5 +35,5 @@ if (temp == NULL)
 return (NULL);
 for (i = 0; (unsigned int)i < (old_size < new_size ? old_size : new_size); i++)
 ((char *)temp)[i] = ((char *)ptr)[i];
-return (ptr);
+return (temp);
 }
