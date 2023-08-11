@@ -23,7 +23,7 @@ ptr = malloc(size * nmemb);
 if (ptr == NULL)
 return (NULL);
 
-nmemb = nmemb * size;
+nmemb = nmemb *size;
 while (nmemb--)
 ptr[nmemb] = 0;
 return (ptr);
