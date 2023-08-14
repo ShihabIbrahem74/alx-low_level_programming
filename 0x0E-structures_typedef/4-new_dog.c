@@ -1,6 +1,29 @@
 #include "dog.h"
 #include <stdlib.h>
 /**
+ * *_strcpy - fucntion that is mintioned in another code
+ *
+ * Description: function to do task for alx
+ *
+ * @dest: '*a' is a pointer
+ *
+ * @src: '*src' is a pointer
+ *
+ * Return: Always 0.
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+int len = 0;
+while (src[len] != 0)
+{
+dest[len] = src[len];
+len++;
+}
+dest[len] = src[len];
+return (dest);
+}
+/**
  * _strlen - fucntion that is mintioned in another code
  *
  * Description: function to do task for alx
@@ -51,8 +74,8 @@ free(ptr->name);
 free(ptr);
 return (NULL);
 }
-ptr->name = name;
-ptr->owner = owner;
+_strcpy(ptr->name, name);
+_strcpy(ptr->owner, owner);
 ptr->age = age;
 
 return (ptr);
