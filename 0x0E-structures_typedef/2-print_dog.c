@@ -3,7 +3,7 @@
 /**
  * print_dog - checks if a character is a digit
  *
- * @dog: struct parameter
+ * @d: struct parameter
  *
  * Return: void
  */
@@ -12,8 +12,8 @@ void print_dog(struct dog *d)
 {
 if (d)
 {
-    printf("Name: %s\n", d->name ? d->name : "(nil)");
-    printf("Age: %f\n", d->age);
-    printf("Owner: %s\n", d->owner ? d->owner : "(nil)");
+printf("Name: %s\n", d->name ? d->name : "(nil)");
+printf("Age: %f\n", d->age);
+printf("Owner: %s\n", d->owner ? d->owner : "(nil)");
 }
 }
