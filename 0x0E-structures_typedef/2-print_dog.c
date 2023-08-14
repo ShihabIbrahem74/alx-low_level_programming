@@ -3,7 +3,7 @@
 /**
  * print_dog - checks if a character is a digit
  *
- * @dog: struct parameter
+ * @d: struct parameter
  *
  * Return: void
  */
