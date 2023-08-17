@@ -11,6 +11,9 @@ int a, b;
 char arr[2];
 int (*func)(int, int);
 
+arr[0] = argv[2][0];
+arr[1] = '\0';
+
 	if (argc != 4)
 	{
 		printf("Error\n");
