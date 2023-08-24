@@ -10,6 +10,9 @@ void free_list(list_t *head)
 	list_t *buffer = head;
 	list_t *holder;
 
+	if (!head)
+	return;
+
 	while (buffer->next != NULL)
 	{
 		holder = buffer;
