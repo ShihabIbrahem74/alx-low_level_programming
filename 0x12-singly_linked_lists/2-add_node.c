@@ -33,7 +33,7 @@ list_t *add_node(list_t **head, const char *str)
 		free(new);
 		return (NULL);
 	}
-	new->str = (char *)str;
+	new->str = strdup(str);
 	new->len = _strlen((char *)str);
 	new->next = *head;
 	*head = new;
