@@ -36,4 +36,5 @@ while (buffer)
 	else
 	printf("\n");
 }
+return (0);
 }
