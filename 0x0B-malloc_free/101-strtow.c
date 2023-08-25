@@ -14,26 +14,20 @@
 
 int letters_count(char *str, int size)
 {
-int i, sw = 0, j;
+int i;
+int sw = 0, j;
+
 for (i = 0; i < size; i++)
 {
-if (str[i] == ' ' && str[i + 1] != ' ' && (i + 1) < size)
+if (str[i] != ' ')
 {
 j = i + 1;
-while (str[j] != ' ')
+while (str[j] != ' ' && str[j] != '\0')
 {
-sw++;
 j++;
 }
-}
-else if (str[0] != ' ')
-{
-j = i + 1;
-while (str[j] != ' ')
-{
 sw++;
-j++;
-}
+i = j - 1;
 }
 }
 return (sw);
