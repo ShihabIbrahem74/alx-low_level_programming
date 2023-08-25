@@ -95,7 +95,6 @@ char **strtow(char *str)
 int size, i, j, x, y, letters;
 int flag = 0;
 char **ptr;
-
 if (str == NULL || *str == '\0')
 return (NULL);
 while (*str != '\0' && *str == ' ')
@@ -107,9 +106,11 @@ if (ptr == NULL)
 return (NULL);
 ptr[letters - 1] = NULL;
 i = 0;
-if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
+while (str[i] != '\0')
 {
-for (j = 1; str[i + j] != ' ' && str[i + j]; j++)
+if (str[i] != ' ')
+{
+for (j = 0; str[i + j] != ' ' && str[i + j] != '\0'; j++)
 ;
 ptr[flag] = (char *)malloc((j + 1) * sizeof(char));
 if (ptr[flag] == NULL)
@@ -127,5 +128,6 @@ i += j;
 }
 else
 i++;
+}
 return (ptr);
 }
