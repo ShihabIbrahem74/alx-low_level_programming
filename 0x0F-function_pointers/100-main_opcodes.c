@@ -27,8 +27,8 @@ if (buffer < 0)
 while (buffer)
 {
 	buffer--;
-	ptr++;
 	printf("%02hhx", *ptr);
+	ptr++;
 	if (buffer)
 	{
 		printf(" ");
