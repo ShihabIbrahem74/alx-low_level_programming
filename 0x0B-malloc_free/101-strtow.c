@@ -89,7 +89,7 @@ char **strtow(char *str)
 int size, i, j, x, y, letters;
 int flag = 0;
 char **ptr;
-if (str == NULL || *str == '\0')
+if (str == NULL || *str == '\0' || (*str == ' ' && str[1] == '\0'))
 return (NULL);
 while (*str != '\0' && *str == ' ')
 str++;
