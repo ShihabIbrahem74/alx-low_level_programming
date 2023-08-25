@@ -8,21 +8,32 @@
  * @argv: values of argumens
  * Return: Always 0.
  */
-int main (int argc, char **argv)
+int main(int argc, char **argv)
 {
-	char *p = (char *)main;
-	int a;
+int buffer;
+char *ptr = (char *)main;
 
-	if (argc != 2)
+if (argc != 2)
+{
+printf("Error\n");
+exit(1);
+}
+buffer = atoi(argv[1]);
+if (buffer < 0)
+{
+	printf("Error\n");
+	exit(2);
+}
+while (buffer)
+{
+	buffer--;
+	ptr++;
+	printf("%02hhx", *ptr);
+	if (buffer)
 	{
-		printf("Error\n");
-		exit(1);
+		printf(" ");
 	}
-	a = atoi(argv[1]);
-	if (b < 0)
-	{
-		printf("Error\n");
-		exit(2);
-	}
-
+	else
+	printf("\n");
+}
 }
