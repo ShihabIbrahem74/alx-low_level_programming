@@ -6,6 +6,12 @@
 #define ERR_NOCLOSE "Error: Can't close fd %d\n"
 #define ALL (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
 
+/**
+ * main - check the code
+ * @argc: an argument
+ * @argv: an arument
+ * Return: Always 0.
+ */
 int main(int argc, char **argv)
 {
 	int source_fd = 0, target_fd = 0;
