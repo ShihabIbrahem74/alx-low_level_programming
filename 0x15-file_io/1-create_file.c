@@ -11,10 +11,14 @@
 
 int _strlen(char *s)
 {
-int len = 0;
-while (s[len] != 0)
-len++;
-return (len);
+	int i = 0;
+
+	if (!s)
+		return (0);
+
+	while (*s++)
+		i++;
+	return (i);
 }
 
 /**
@@ -28,15 +32,20 @@ return (len);
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	ssize_t bytes = 0, len = _strlen(text_content);
+	ssize_t flag = 0;
+	ssize_t len = _strlen(text_content);
 
-	if (!filename)
-		return (-1);
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+	if (!filename || !text_content)
+	return (-1);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 	if (fd == -1)
-		return (-1);
+	return (-1);
+
 	if (len)
-		bytes = write(fd, text_content, len);
+	flag = write(fd, text_content, len);
 	close(fd);
-	return (bytes == len ? 1 : -1);
+	if (flag == len)
+	return (1);
+	else
+	return (-1);
 }
