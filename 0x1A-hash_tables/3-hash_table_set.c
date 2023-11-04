@@ -18,8 +18,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	key == NULL || strlen(key) == 0 || value == NULL)
 		return (0);
 
-	index = hash_djb2(key) % (ht->size);
-	searcher = ht->array;
+	index = hash_djb2((const unsigned char *)key) % (ht->size);
+	searcher = ht->array[index];
 	while (searcher != NULL)
 	{
 		if (strcmp(searcher->key, key) == 0)
