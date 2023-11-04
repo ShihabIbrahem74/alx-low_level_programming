@@ -27,8 +27,8 @@ void hash_table_print(const hash_table_t *ht)
 			else
 			{
 				printf(", '%s' : '%s'", searcher->key, searcher->value);
-				searcher = searcher->next;
 			}
+			searcher = searcher->next;
 		}
 	}
 	printf("}\n");
