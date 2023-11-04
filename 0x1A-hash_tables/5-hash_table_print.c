@@ -19,15 +19,12 @@ void hash_table_print(const hash_table_t *ht)
 		searcher = ht->array[i];
 		while (searcher != NULL)
 		{
-			if (flag == 0)
+			if (flag == 1)
 			{
-				printf("'%s' : '%s'", searcher->key, searcher->value);
-				flag = 1;
+				printf(", ");
 			}
-			else
-			{
-				printf(", '%s' : '%s'", searcher->key, searcher->value);
-			}
+			printf("'%s' : '%s'", searcher->key, searcher->value);
+			flag = 1;
 			searcher = searcher->next;
 		}
 	}
