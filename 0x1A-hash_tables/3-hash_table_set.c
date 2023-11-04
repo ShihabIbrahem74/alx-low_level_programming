@@ -18,7 +18,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	key == NULL || strlen(key) == 0 || value == NULL)
 		return (0);
 
-	index = hash_djb2((const unsigned char *)key) % (ht->size);
+	index = key_index((const unsigned char *)key, ht->size);
 	searcher = ht->array[index];
 	while (searcher != NULL)
 	{
@@ -38,7 +38,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
-	return (0);
+	return (1);
 
 }
 /**
