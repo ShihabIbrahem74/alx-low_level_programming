@@ -20,8 +20,10 @@ void hash_table_print(const hash_table_t *ht)
 		while (searcher != NULL)
 		{
 			if (flag == 1)
+			{
 				printf(", ");
-			printf("'%s': '%s'", searcher->key, searcher->value);
+			}
+			printf("'%s' : '%s'", searcher->key, searcher->value);
 			flag = 1;
 			searcher = searcher->next;
 		}
