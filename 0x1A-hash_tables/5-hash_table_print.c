@@ -23,7 +23,7 @@ void hash_table_print(const hash_table_t *ht)
 			{
 				printf(", ");
 			}
-			printf("'%s' : '%s'", searcher->key, searcher->value);
+			printf("'%s': '%s'", searcher->key, searcher->value);
 			flag = 1;
 			searcher = searcher->next;
 		}
